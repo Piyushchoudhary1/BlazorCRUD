@@ -8,6 +8,9 @@ namespace BlazorCrud.Server.Interfaces
 
         public void AddEmployee(Employee employee);
 
+
+        public void AddCity (City city);
+        public void UpdateCity (City city);
         public void UpdateEmployee(Employee employee);
 
         public Employee GetEmployeeData(int id);

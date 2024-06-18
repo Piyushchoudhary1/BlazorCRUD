@@ -54,6 +54,36 @@ namespace BlazorCrud.Server.DataAccess
             }
         }
 
+
+        //To Add Update a City
+
+        public void AddCity(City city)
+        {
+            try
+            {
+                _dbContext.Cities.Add(city);
+                _dbContext.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //To Update the records of a particluar employee    
+        public void UpdateCity(City city)
+        {
+            try
+            {
+                _dbContext.Entry(city).State = EntityState.Modified;
+                _dbContext.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         //Get the details of a particular employee    
         public Employee GetEmployeeData(int id)
         {
